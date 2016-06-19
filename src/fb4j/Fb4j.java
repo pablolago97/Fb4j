@@ -1,4 +1,6 @@
-package facebook4j;
+package fb4j;
+
+import facebook4j.FacebookException;
 
 /**
  *
