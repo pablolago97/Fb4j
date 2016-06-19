@@ -2,12 +2,12 @@ package facebook4j;
 
 /**
  *
- * @author manu
+ * @author Pablo Lago-Bergón Pazos
  */
-public class Facebook4j {
+public class Fb4j {
 
     public static void main(String[] args) throws FacebookException {
-        Ventana objVentana = new Ventana ();
+        F4javaform objVentana = new F4javaform ();
         objVentana.setVisible(true);
         
     }

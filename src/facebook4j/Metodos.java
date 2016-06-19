@@ -5,15 +5,15 @@ import java.net.MalformedURLException;
 
 /**
  *
- * @author galle
+ * @author Pablo Lago-Bergón Pazos
  */
 public class Metodos {
     
     Facebook facebook = new FacebookFactory().getInstance();
     
     /**
-     * Este metodo postea en facebook lo recibido en el String estado.
-     * @param estado recibe un String con el estado a publicar.
+     * Postea el 'String' recibido en el JTextField
+     * @param estado recibe dicho 'String'
      * @throws FacebookException 
      */
     public void publicarEstado (String estado) throws FacebookException{
@@ -21,8 +21,8 @@ public class Metodos {
     }
     
     /**
-     * Este metodo da like en facebook a un post si a idpost le damos como valor del post.
-     * @param idpost recibe un String con el id del post que va a dar like.
+     * Se introduce la 'ID' de un post  y se recoge en un 'String' para su posterior 'like'
+     * @param idpost recibe dicho 'String'
      * @throws FacebookException 
      */
     public void darLike (String idpost) throws FacebookException{
@@ -30,8 +30,8 @@ public class Metodos {
     }
     
     /**
-     * Este metodo da unlike en facebook a un post si a idpost le damos como valor del post.
-     * @param idpost recibe un String con el id del post que va a dar unlike.
+     * Se introduce la 'ID' de un post  y se recoge en un 'String' para su posterior 'like'
+     * @param idpost recibe dicho 'String'
      * @throws FacebookException 
      */
     public void darUnLike (String idpost) throws FacebookException{
@@ -39,9 +39,9 @@ public class Metodos {
     }
     
     /**
-     * Comenta un post de facebook con el valor del String "comentario" que tenga como id el String "idPost". 
-     * @param idPost recibe un String con el id del post que va a comentar.
-     * @param comentario recibe un String con el comentario a comentar.
+     * Comenta un 'post' de 'facebook' del 'id' que le pasemos
+     * @param idPost recibe una 'ID' como 'String'
+     * @param comentario recibe el comentario como una 'String'
      * @throws FacebookException 
      */
     public void comentarPost (String idPost, String comentario) throws FacebookException{
@@ -49,16 +49,16 @@ public class Metodos {
     }
     
     /**
-     * Postea una foto en facebook que se encuentre en la ruta del valor del String "rutaFoto"
-     * @param rutaFoto recibe un String con la ruta donde se encuentra la foto a postear.
-     * @param comentario recibe un String con el comentario a postear. No se usa actualmente porque no he sido capaz de postear la foto con el comentario.
+     * Postea una foto de Internet en 'Facebook' (Es necesario el link)
+     * @param rutaFoto recoge un 'String' con la foto
+     * @param comentario recibe un String con el comentario a postear
      * @throws FacebookException
      * @throws MalformedURLException 
      */
     public void publicarImagen (String rutaFoto, String comentario) throws FacebookException, MalformedURLException{
         Media img = new Media(new File(rutaFoto));
         facebook.postPhoto(img);
-        //facebook.postPhoto(comentario, img);
+        
     }
     
 }
